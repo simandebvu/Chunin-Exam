@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>HelpjuiceChallenge</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= content_for?(:title) ? yield(:title) : "HelpjuiceChallenge" %></title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "HelpjuiceChallenge" %>">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -11,6 +13,14 @@
   </head>
 
   <body>
-    <%= yield %>
+    <!-- <p class="notice"><%= notice %></p>
+       <p class="alert"><%= alert %></p> -->
+       <%= toastr_flash_messages %>
+       <header>
+        <%= render 'layouts/partials/navigation' %>
+      </header>
+      <main role="main">
+        <%= content_for?(:content) ? yield(:content) : yield %>
+        </main>
   </body>
 </html>
