@@ -23,6 +23,10 @@ gem 'jbuilder', '~> 2.7'
 # gem 'bcrypt', '~> 3.1', '>= 3.1.12'
 gem 'devise'
 gem 'toastr-rails', '~> 1.0', '>= 1.0.3'
+group :development do
+  gem "better_errors"
+  gem "binding_of_caller"
+end
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
