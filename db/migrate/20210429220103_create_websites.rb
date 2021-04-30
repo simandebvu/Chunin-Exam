@@ -9,6 +9,6 @@ class CreateWebsites < ActiveRecord::Migration[6.1]
       t.timestamps
     end
 
-    add_index :websites, :uid, unique: true
+    add_index :websites, :site_id, unique: true
   end
 end

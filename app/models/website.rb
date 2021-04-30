@@ -8,7 +8,7 @@ class Website < ApplicationRecord
   private
 
   def generate_site_id
-    generate_token(:uid)
+    generate_token(:site_id)
   end
 
   def generate_token(column)
