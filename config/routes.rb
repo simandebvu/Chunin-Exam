@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
-  root to: "site_links#index"
+  root to: 'websites#index'
+  namespace :app do
+    resources :websites, only: %i[index create show update destroy]
+  end
 end
