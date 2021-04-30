@@ -1,62 +1,62 @@
-<div data-controller="hello">
-  <h1 data-target="hello.output"></h1>
+<div class="container">
+  
+  <div data-controller="welcome">
+    <h1 data-welcome-target="output"></h1>
+  </div>
+
+
+  <!-- <form  data-controller="" class="form-inline">
+    <div class="form-group mb-2 col-5 pl-0">
+      <label for="staticSiteLink" class="sr-only">Site Link</label>
+      <input type="text" class="form-control-plaintext  border border-white rounded ml-1 text-white p-1" id="staticSiteLink" placeholder="https://">
+    </div>
+    <button type="submit" class="btn btn-primary mb-2">Shorten</button>
+  </form> -->
+  <%= render "layouts/partials/create_site_link", id: "site_link" %>
+  <table class="table table-hover table-dark">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Original URL</th>
+        <th scope="col">Shortened</th>
+        <th scope="col">Site Visits</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr data-toggle="collapse" data-target="#accordion6" class="clickable  collapse-row collapsed">
+        <th scope="row">1</th>
+        <td>Some Stuff</td>
+        <td>Some more stuff</td>
+        <td>And some more</td>
+      </tr>
+      <tr>
+        <td colspan="4">
+          <div id="accordion6" class="collapse">Hidden by default</div>
+        </td>
+      </tr>
+      <tr data-toggle="collapse" data-target="#accordion3" class="clickable  collapse-row collapsed">
+        <th scope="row">1</th>
+        <td>Some Stuff</td>
+        <td>Some more stuff</td>
+        <td>And some more</td>
+      </tr>
+      <tr>
+        <td colspan="4">
+          <div id="accordion3" class="collapse ">Hidden by default</div>
+        </td>
+      </tr>
+      <tr data-toggle="collapse" data-target="#accordion2" class="clickable  collapse-row collapsed">
+        <th scope="row">1</th>
+        <td>Some Stuff</td>
+        <td>Some more stuff</td>
+        <td>And some more</td>
+      </tr>
+      <tr>
+        <td colspan="4">
+          <div id="accordion2" class="collapse">Hidden by default</div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
 </div>
-
-
-<form class="form-inline">
-  <div class="form-group mb-2">
-    <label for="staticEmail2" class="sr-only">Email</label>
-    <input type="text" readonly class="form-control-plaintext" id="staticEmail2" value="email@example.com">
-  </div>
-  <div class="form-group mx-sm-3 mb-2">
-    <label for="inputPassword2" class="sr-only">Password</label>
-    <input type="password" class="form-control" id="inputPassword2" placeholder="Password">
-  </div>
-  <button type="submit" class="btn btn-primary mb-2">Confirm identity</button>
-</form>
-
-<table class="table table-hover table-dark">
-  <thead>
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr data-toggle="collapse" data-target="#accordion6" class="clickable  collapse-row collapsed">
-      <th scope="row">1</th>
-      <td>Some Stuff</td>
-      <td>Some more stuff</td>
-      <td>And some more</td>
-    </tr>
-    <tr>
-      <td colspan="4">
-        <div id="accordion6" class="collapse">Hidden by default</div>
-      </td>
-    </tr>
-    <tr data-toggle="collapse" data-target="#accordion3" class="clickable  collapse-row collapsed">
-      <th scope="row">1</th>
-      <td>Some Stuff</td>
-      <td>Some more stuff</td>
-      <td>And some more</td>
-    </tr>
-    <tr>
-      <td colspan="4">
-        <div id="accordion3" class="collapse ">Hidden by default</div>
-      </td>
-    </tr>
-    <tr data-toggle="collapse" data-target="#accordion2" class="clickable  collapse-row collapsed">
-      <th scope="row">1</th>
-      <td>Some Stuff</td>
-      <td>Some more stuff</td>
-      <td>And some more</td>
-    </tr>
-    <tr>
-      <td colspan="4">
-        <div id="accordion2" class="collapse">Hidden by default</div>
-      </td>
-    </tr>
-  </tbody>
-</table>
